@@ -35,20 +35,20 @@ body {
 
 @font-face {
     font-family: Titulo;
-    src: url(Fonts/AndersonGrotesk-Ultrabold.otf);
+    src: url(Fonts/Inter-ExtraBold.ttf);
     font-display: block;
 }
 
 @font-face {
     font-family: SubTitulo;
-    src: url(Fonts/AndersonGrotesk.otf);
+    src: url(Fonts/Inter-SemiBold.ttf);
     font-display: block;
 }
 
 
 @font-face {
     font-family: Texto;
-    src: url(Fonts/AndersonGrotesk-Light.otf);
+    src: url(Fonts/Inter-Light.ttf);
     font-display: block;
 }
 
