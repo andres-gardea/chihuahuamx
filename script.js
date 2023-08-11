@@ -1,100 +1,38 @@
-const nav = document.getElementById("scroller");
+/*Locomotive Scroll*/
+const lscroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    direction: 'horizontal'
+});
 
-if (window.screen.width >= 1280 && window.screen.height >= 768) {
-    window.onmousemove = (e) => {
-        const percent = e.clientX / window.innerWidth;
+/*Animaciones entrada a la Pagina*/
 
-        nav.animate({
-            transform: `translate(${percent * nav.offsetWidth * -1}px, -0%)`,
-        }, {
-            fill: "both",
-            duration: 20000,
-        });
-    };
+const initAnimation = () => {
+    gsap.timeline({ defaults: { ease: 'expo.inOut', stagger: 0.024 } })
+        .from('.img_wrapper',
+            {
+                duration: 1.4,
+                y: '100%',
+                autoAlpha: 0,
+            },
+        );
 };
 
-if (window.screen.width <= 1280 && window.screen.height >= 768) {
+initAnimation();
 
-    const carousel = document.querySelector(".scroller"),
-        firstImg = carousel.querySelectorAll(".scroll-section")[0],
-        arrowIcons = document.querySelectorAll(".scroller-container span");
-
-    let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
-
-    const showHideIcons = () => {
-        let scrollWidth = carousel.scrollWidth - carousel.clientWidth; 
-        arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-        arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
-    }
-
-    arrowIcons.forEach(icon => {
-        icon.addEventListener("click", () => {
-            let firstImgWidth = firstImg.clientWidth;
-            carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-            setTimeout(() => showHideIcons(), 10);
-        });
-    });
-
-    const autoSlide = () => {
-        if (carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
-
-        positionDiff = Math.abs(positionDiff);
-        let firstImgWidth = firstImg.clientWidth + .1;
-        let valDifference = firstImgWidth - positionDiff;
-
-        if (carousel.scrollLeft > prevScrollLeft) {
-            return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-        }
-        carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
-
-    const dragStart = (e) => {
-        isDragStart = true;
-        prevPageX = e.pageX || e.touches[0].pageX;
-        prevScrollLeft = carousel.scrollLeft;
-    }
-
-    const dragging = (e) => {
-        if (!isDragStart) return;
-        e.preventDefault();
-        isDragging = true;
-        carousel.classList.add("dragging");
-        positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-        carousel.scrollLeft = prevScrollLeft - positionDiff;
-        showHideIcons();
-    }
-
-    const dragStop = () => {
-        isDragStart = false;
-        carousel.classList.remove("dragging");
-
-        if (!isDragging) return;
-        isDragging = false;
-        autoSlide();
-    }
-
-    carousel.addEventListener("mousedown", dragStart);
-    carousel.addEventListener("touchstart", dragStart);
-
-    document.addEventListener("mousemove", dragging);
-    carousel.addEventListener("touchmove", dragging);
-
-    document.addEventListener("mouseup", dragStop);
-    carousel.addEventListener("touchend", dragStop);
-};
-
-
+/*Animaciones del Nav*/
 const tl = gsap.timeline({ paused: true });
 
 const animateOpenNav = () => {
 
     tl.to(".nav-container", 0.2, {
+        x: '-33vw',
         autoAlpha: 1,
         delay: 0.1,
     });
 
     tl.to(".city-text, .logo-text", 0.2, {
-        color: "#fff",
+        color: "#1b1b1b",
     },
         "-+0.1");
 
@@ -120,7 +58,6 @@ const animateOpenNav = () => {
     }, "-=0.5").reverse();
 };
 
-
 const openNav = () => {
     animateOpenNav();
     const navBtn = document.getElementById("menu-toggle-btn");
@@ -132,3 +69,162 @@ const openNav = () => {
 
 openNav();
 
+const photoSection1 = document.querySelector('#scroll-section-1');
+const photoSection2 = document.querySelector('#scroll-section-2');
+const photoSection3 = document.querySelector('#scroll-section-3');
+const photoSection4 = document.querySelector('#scroll-section-4');
+const photoSection5 = document.querySelector('#scroll-section-5');
+const photoSection6 = document.querySelector('#scroll-section-6');
+const photoSection7 = document.querySelector('#scroll-section-7');
+const photoSection8 = document.querySelector('#scroll-section-8');
+const photoSection9 = document.querySelector('#scroll-section-9');
+const photoSection10 = document.querySelector('#scroll-section-10');
+
+function SectionView1() {
+
+    photoSection1.classList.toggle("open-section");
+    photoSection2.classList.remove("open-section");
+    photoSection3.classList.remove("open-section");
+    photoSection4.classList.remove("open-section");
+    photoSection5.classList.remove("open-section");
+    photoSection6.classList.remove("open-section");
+    photoSection7.classList.remove("open-section");
+    photoSection8.classList.remove("open-section");
+    photoSection9.classList.remove("open-section");
+    photoSection10.classList.remove("open-section");
+
+}
+
+function SectionView2() {
+
+    photoSection1.classList.remove("open-section");
+    photoSection2.classList.toggle("open-section");
+    photoSection3.classList.remove("open-section");
+    photoSection4.classList.remove("open-section");
+    photoSection5.classList.remove("open-section");
+    photoSection6.classList.remove("open-section");
+    photoSection7.classList.remove("open-section");
+    photoSection8.classList.remove("open-section");
+    photoSection9.classList.remove("open-section");
+    photoSection10.classList.remove("open-section");
+
+}
+
+function SectionView3() {
+
+    photoSection1.classList.remove("open-section");
+    photoSection2.classList.remove("open-section");
+    photoSection3.classList.toggle("open-section");
+    photoSection4.classList.remove("open-section");
+    photoSection5.classList.remove("open-section");
+    photoSection6.classList.remove("open-section");
+    photoSection7.classList.remove("open-section");
+    photoSection8.classList.remove("open-section");
+    photoSection9.classList.remove("open-section");
+    photoSection10.classList.remove("open-section");
+
+}
+
+function SectionView4() {
+
+    photoSection1.classList.remove("open-section");
+    photoSection2.classList.remove("open-section");
+    photoSection3.classList.remove("open-section");
+    photoSection4.classList.toggle("open-section");
+    photoSection5.classList.remove("open-section");
+    photoSection6.classList.remove("open-section");
+    photoSection7.classList.remove("open-section");
+    photoSection8.classList.remove("open-section");
+    photoSection9.classList.remove("open-section");
+    photoSection10.classList.remove("open-section");
+
+}
+
+function SectionView5() {
+
+    photoSection1.classList.remove("open-section");
+    photoSection2.classList.remove("open-section");
+    photoSection3.classList.remove("open-section");
+    photoSection4.classList.remove("open-section");
+    photoSection5.classList.toggle("open-section");
+    photoSection6.classList.remove("open-section");
+    photoSection7.classList.remove("open-section");
+    photoSection8.classList.remove("open-section");
+    photoSection9.classList.remove("open-section");
+    photoSection10.classList.remove("open-section");
+
+}
+
+function SectionView6() {
+
+    photoSection1.classList.remove("open-section");
+    photoSection2.classList.remove("open-section");
+    photoSection3.classList.remove("open-section");
+    photoSection4.classList.remove("open-section");
+    photoSection5.classList.remove("open-section");
+    photoSection6.classList.toggle("open-section");
+    photoSection7.classList.remove("open-section");
+    photoSection8.classList.remove("open-section");
+    photoSection9.classList.remove("open-section");
+    photoSection10.classList.remove("open-section");
+
+}
+
+function SectionView7() {
+
+    photoSection1.classList.remove("open-section");
+    photoSection2.classList.remove("open-section");
+    photoSection3.classList.remove("open-section");
+    photoSection4.classList.remove("open-section");
+    photoSection5.classList.remove("open-section");
+    photoSection6.classList.remove("open-section");
+    photoSection7.classList.toggle("open-section");
+    photoSection8.classList.remove("open-section");
+    photoSection9.classList.remove("open-section");
+    photoSection10.classList.remove("open-section");
+
+}
+
+function SectionView8() {
+
+    photoSection1.classList.remove("open-section");
+    photoSection2.classList.remove("open-section");
+    photoSection3.classList.remove("open-section");
+    photoSection4.classList.remove("open-section");
+    photoSection5.classList.remove("open-section");
+    photoSection6.classList.remove("open-section");
+    photoSection7.classList.remove("open-section");
+    photoSection8.classList.toggle("open-section");
+    photoSection9.classList.remove("open-section");
+    photoSection10.classList.remove("open-section");
+
+}
+
+function SectionView9() {
+
+    photoSection1.classList.remove("open-section");
+    photoSection2.classList.remove("open-section");
+    photoSection3.classList.remove("open-section");
+    photoSection4.classList.remove("open-section");
+    photoSection5.classList.remove("open-section");
+    photoSection6.classList.remove("open-section");
+    photoSection7.classList.remove("open-section");
+    photoSection8.classList.remove("open-section");
+    photoSection9.classList.toggle("open-section");
+    photoSection10.classList.remove("open-section");
+
+}
+
+function SectionView10() {
+
+    photoSection1.classList.remove("open-section");
+    photoSection2.classList.remove("open-section");
+    photoSection3.classList.remove("open-section");
+    photoSection4.classList.remove("open-section");
+    photoSection5.classList.remove("open-section");
+    photoSection6.classList.remove("open-section");
+    photoSection7.classList.remove("open-section");
+    photoSection8.classList.remove("open-section");
+    photoSection9.classList.remove("open-section");
+    photoSection10.classList.toggle("open-section");
+}

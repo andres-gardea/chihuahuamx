@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chihuahua</title>
 
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='locomotive-scroll.min.css'>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Google tag (gtag.js) -->
@@ -22,13 +22,14 @@
 
         gtag('config', 'G-7C3FLG7YF8');
     </script>
+
 </head>
 
 <body>
-    <div class="contain">
 
+    <header class="header-section">
         <nav class="nav-bar">
-            <h6 class="logo-text">Logo</h6>
+            <h6 class="logo-text">ChihuahuaMx</h6>
             <div class="menu-toggle">
                 <div id="menu-toggle-btn">
                     <span class="menu-btn"></span>
@@ -37,9 +38,9 @@
         </nav>
 
         <div class="nav-container">
-            <div class="nav">
+            <div class="nav-main">
                 <div class="social-links">
-                    <div class="nav-logo">Logo</div>
+                    <div class="nav-logo">ChihuahuaMx</div>
                     <div class="nav-socials">
                         <a href="">Facebook</a>
                     </div>
@@ -67,219 +68,266 @@
                         <div class="nav-items-wrapper"></div>
                     </div>
                 </div>
-                <div class="nav-footer">
-                    <a href="">Lorem ipsum dolor sit amet consectetur.</a>
-                </div>
+            </div>
+            <div class="nav-footer">
+                <a href="">Pagina hecha por <b>Andres Gardea</b>.</a>
             </div>
         </div>
+    </header>
 
-        <div class="scroller-container">
+    <main data-scroll-container>
+        <section class="scroller-container">
+            <div class="scroller-section">
 
-            <div class="arrow-btn">
-                <span id="left" class="material-symbols-outlined">
-                    chevron_left
-                </span>
-            </div>
+                <div class="scroll-text-section" id="scroll-first">
+                    <h1 class="gallery__text-inner" data-scroll data-scroll-speed="3">Chihuahua</h1>
+                    <h1 data-scroll data-scroll-speed="1" class="gallery__text-inner">Mexico</h1>
+                </div>
 
-            <div id="scroller" class="scroller">
-
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-section" id="scroll-section-1">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>01</h6>
+                    </div>
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span I</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
 
-                        </div>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
                         <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView1();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
 
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-section" id="scroll-section-2">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>02</h6>
+                    </div>
                     <div class="scroll-text-container">
-                        <h2 class="scroll-subtitle">Span II</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
+                        <h2 class="scroll-subtitle">Span I</h2>
 
-                        </div>
-                        <h5 class="scroll-counter">2/10</h5>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
+                        <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView2();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
 
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-section" id="scroll-section-3">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>03</h6>
+                    </div>
                     <div class="scroll-text-container">
-                        <h2 class="scroll-subtitle">Span III</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
+                        <h2 class="scroll-subtitle">Span I</h2>
 
-                        </div>
-                        <h5 class="scroll-counter">3/10</h5>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
+                        <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView3();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
 
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-section" id="scroll-section-4">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>04</h6>
+                    </div>
                     <div class="scroll-text-container">
-                        <h2 class="scroll-subtitle">Span IV</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
+                        <h2 class="scroll-subtitle">Span I</h2>
 
-                        </div>
-                        <h5 class="scroll-counter">4/10</h5>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
+                        <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView4();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
 
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-text-section" id="cultura">
+                    <h1 class="gallery__text-inner" data-scroll data-scroll-speed="3">Cultura</h1>
+                    <h1 data-scroll data-scroll-speed="1" class="gallery__text-inner">en Chihuahua</h1>
+                </div>
+
+                <div class="scroll-section" id="scroll-section-5">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>05</h6>
+                    </div>
                     <div class="scroll-text-container">
-                        <h2 class="scroll-subtitle">Span V</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
+                        <h2 class="scroll-subtitle">Span I</h2>
 
-                        </div>
-                        <h5 class="scroll-counter">5/10</h5>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
+                        <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView5();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
 
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-section" id="scroll-section-6">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>06</h6>
+                    </div>
                     <div class="scroll-text-container">
-                        <h2 class="scroll-subtitle">Span VI</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
+                        <h2 class="scroll-subtitle">Span I</h2>
 
-                        </div>
-                        <h5 class="scroll-counter">6/10</h5>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
+                        <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView6();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
 
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-text-section" id="gastronomia">
+                    <h1 class="gallery__text-inner" data-scroll data-scroll-speed="3">Gastronomia</h1>
+                    <h1 data-scroll data-scroll-speed="1" class="gallery__text-inner">en Chihuahua</h1>
+                </div>
+
+                <div class="scroll-section" id="scroll-section-7">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>02</h6>
+                    </div>
                     <div class="scroll-text-container">
-                        <h2 class="scroll-subtitle">Span VII</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
+                        <h2 class="scroll-subtitle">Span I</h2>
 
-                        </div>
-                        <h5 class="scroll-counter">7/10</h5>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
+                        <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView7();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
 
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-section" id="scroll-section-8">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>03</h6>
+                    </div>
                     <div class="scroll-text-container">
-                        <h2 class="scroll-subtitle">Span VIII</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
+                        <h2 class="scroll-subtitle">Span I</h2>
 
-                        </div>
-                        <h5 class="scroll-counter">8/10</h5>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
+                        <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView8();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
 
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-section" id="scroll-section-9">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>04</h6>
+                    </div>
                     <div class="scroll-text-container">
-                        <h2 class="scroll-subtitle">Span IX</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
+                        <h2 class="scroll-subtitle">Span I</h2>
 
-                        </div>
-                        <h5 class="scroll-counter">9/10</h5>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
+                        <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView9();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
 
-                <div class="scroll-section" draggable="false">
+                <div class="scroll-text-section" id="viajes">
+                    <h1 class="gallery__text-inner" data-scroll data-scroll-speed="3">Viajes</h1>
+                </div>
+
+                <div class="scroll-section" id="scroll-section-10">
+                    <div class="scroll-title-container">
+                        <h2 class="scroll-title" data-scroll data-scroll-speed="1">Subtitulo</h2>
+                        <h6>10</h6>
+                    </div>
                     <div class="scroll-text-container">
-                        <h2 class="scroll-subtitle">Span X</h2>
-                        <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                                debitis
-                                sed non
-                                consequuntur perspiciatis.</p>
-                            <h2>Leer mas...</h2>
+                        <h2 class="scroll-subtitle">Span I</h2>
 
-                        </div>
-                        <h5 class="scroll-counter">10/10</h5>
+                        <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            debitis
+                            sed non
+                            consequuntur perspiciatis.</p>
+                        <h2 class="scroll-text">Leer mas...</h2>
+
+                        <h5 class="scroll-counter">1/10</h5>
                     </div>
-                    <div class="img_wrapper">
-                        <img src="Multimedia/Colibries/045(Recortada).webp" alt="">
+                    <div class="img_wrapper" onclick="SectionView10();">
+                        <img src="Multimedia/006.webp" alt="">
                     </div>
                 </div>
+
+                <div class="scroll-text-section" id="scroll-last">
+                    <h1 class="gallery__text-inner" data-scroll data-scroll-speed="3">Chihuahua</h1>
+                    <h1 data-scroll data-scroll-speed="1" class="gallery__text-inner">Mexico</h1>
+                </div>
+
+
 
             </div>
+        </section>
+    </main>
 
-            <div class="arrow-btn">
-                <span id="right" class="material-symbols-outlined">
-                    chevron_right
-                </span>
-            </div>
+    <footer class="footer-container">
+        <h6 class="footer-text"> &larr; Scrol to Explore &rarr; </h6>
+    </footer>
 
-        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-        <footer class="footer-container">
-            <h6 class="footer-text">Pagina desarrolada por: Andres Gardea</h6>
-        </footer>
-    </div>
+    <script src="locomotive-scroll.min.js"></script>
 
-    <script src="script.min.js"></script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
