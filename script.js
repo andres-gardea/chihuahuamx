@@ -228,3 +228,12 @@ function SectionView10() {
     photoSection9.classList.remove("open-section");
     photoSection10.classList.toggle("open-section");
 }
+
+
+/*Reloj*/
+var ChihuahuaTime = function () {
+    document.getElementById("time-text").innerHTML = new Date().toLocaleString("en-US", { timeZone: "America/Chihuahua", timeStyle: "medium" })
+}
+
+ChihuahuaTime();
+setInterval(ChihuahuaTime, 1000);
