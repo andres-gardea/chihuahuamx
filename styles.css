@@ -502,7 +502,7 @@ span {
 
 /*---Responsive---*/
 
-@media(max-width: 600) {
+@media(max-width: 600px) {
     main{
         overflow-x: scroll;
         overflow-y: hidden;
