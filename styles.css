@@ -172,6 +172,11 @@ span {
     font-size: 1.8rem;
 }
 
+#time-text{
+    font-size: 1.1rem;
+    font-family: Texto;
+}
+
 .nav {
     width: 70%;
     display: flex;
@@ -474,6 +479,16 @@ span {
 }
 
 @media(max-width: 1280px) {
+    main{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 100vh;
+    }
+
+    .nav-bar{
+        height: 7vh;
+    }
+
     .scroller {
         position: relative;
         left: 0%;
@@ -486,6 +501,17 @@ span {
 
     .scroller.dragging {
         scroll-behavior: auto;
+    }
+
+    .scroll-text-section{
+        font-size: 8rem;
+        min-width: auto;
+        width: auto;
+        max-width: 200vw;
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        padding: 0 1rem;
     }
 
     .scroll-section {

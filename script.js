@@ -31,8 +31,8 @@ const animateOpenNav = () => {
         delay: 0.1,
     });
 
-    tl.to(".city-text, .logo-text", 0.2, {
-        color: "#1b1b1b",
+    tl.to("#time-text, .logo-text", 0.2, {
+        color: "#fff",
     },
         "-+0.1");
 
