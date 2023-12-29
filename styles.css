@@ -519,13 +519,14 @@ span {
     main{
         overflow-x: scroll;
         overflow-y: hidden;
-        height: 100vh;
-        display: flex;
-        align-items: center;
+        height: 100dvh;
+        display: grid;
+        grid-template-rows: 7vh 3vh 1fr 3vh 7vh;;
     }
 
     .scroller-container{
-        height: 87dvh;
+        height: 100%;
+        grid-row: 3/4;
         align-items: center;
     }
 
@@ -629,6 +630,7 @@ span {
 
     .footer-container{
         position: fixed;
+        height: 7vh;
     }
 
 }
