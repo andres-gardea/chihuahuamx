@@ -507,6 +507,17 @@ span {
         overflow-x: scroll;
         overflow-y: hidden;
         height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .scroller-container{
+        height: 87vh;
+        align-items: center;
+    }
+
+    .scroller-section{
+        align-items: center;
     }
 
     .nav-bar{
@@ -590,12 +601,12 @@ span {
     
     .img_wrapper img,
     .scroll-section:hover .img_wrapper img {
-        transform: scale(1.6);
+        transform: scale(1);
         object-fit: cover;
     }
     
     .scroll-section.open-section:hover .img_wrapper img{
-        transform: scale(1);
+        transform: scale(1.2);
         height: 100%;
         width: 100%;
         object-fit: cover;
