@@ -32,7 +32,7 @@ const animateOpenNav = () => {
     });
 
     tl.to("#time-text, .logo-text", 0.2, {
-        color: "#fff",
+        color: "#e0e0e0",
     },
         "-+0.1");
 
