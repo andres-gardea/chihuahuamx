@@ -66,6 +66,10 @@ h2 {
     font-family: Texto;
 }
 
+h3{
+    font-family: Texto;
+}
+
 h5 {
     font-family: Titulo;
 }
@@ -76,6 +80,11 @@ h6 {
 
 p {
     font-family: Texto;
+}
+
+a{
+    font-family: Texto;
+    text-decoration: none;
 }
 
 span {
@@ -350,7 +359,11 @@ span {
     z-index: -1;
     color: #fff;
     transition: all .2s ease-in-out;
+}
 
+.scroll-text-container a{
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .scroll-section.open-section .scroll-text-container {
@@ -574,6 +587,8 @@ span {
         height: 100%;
         grid-column: 1/2;
         grid-row: 2/3;
+        z-index: 1;
+        color: #ffffff;
     }
 
     .scroll-text {
