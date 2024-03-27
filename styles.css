@@ -186,115 +186,19 @@ span {
     font-family: Texto;
 }
 
-.nav {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
+.weather-zone{
+    text-align: center;
 }
 
-.social-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 33vh;
-}
-
-.nav-logo {
+#temperature-text{
+    font-size: 1.8rem;
     font-family: Titulo;
-    font-size: 70px;
+
 }
 
-.nav-socials {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav-socials a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
+#temperature-desc{
+    font-size: 1.1rem;
     font-family: Texto;
-    padding: .3em .4em;
-}
-
-.contact-link {
-    position: relative;
-}
-
-.contact-link a {
-    position: relative;
-    top: 60px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 4rem;
-    font-family: Texto;
-}
-
-.nav-items-wrapper:after {
-    content: "";
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 500px;
-    height: 5rem;
-    background: #222;
-    margin: 0 auto;
-    transition: 1s;
-}
-
-.nav-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    padding: 2em 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-footer a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    font-family: Texto;
-}
-
-@media(max-width: 1280px) {
-    .nav-container {
-        width: 100vw;
-    }
-
-    .nav {
-        flex-direction: column-reverse;
-    }
-
-    .nav-logo {
-        display: none;
-    }
-
-    .nav-footer {
-        display: none;
-    }
-
-    .contact-link {
-        padding: 1rem 0;
-    }
-
-    .contact-link a {
-        font-size: 3rem;
-    }
-
-    .social-links {
-        margin-top: 6rem;
-    }
-
-    .nav-socials a {
-        padding: 1rem 0;
-    }
 }
 
 /*-----Scroller-----*/
@@ -470,7 +374,7 @@ span {
     opacity: 1;
     top: 0;
     left: 0;
-    transform: scale(2.6);
+    transform: scale(1.4);
 
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -479,15 +383,15 @@ span {
     object-fit: contain;
 }
 
-.scroll-section:hover .img_wrapper img {
-    transform: scale(1.8);
+.img_wrapper:hover img {
+    transform: scale(1.2);
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.scroll-section.open-section:hover .img_wrapper img {
+.scroll-section.open-section .img_wrapper img {
     transform: scale(1);
     height: 100%;
-    width: auto;
+    width: 100%;
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
