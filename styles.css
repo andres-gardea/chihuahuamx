@@ -65,32 +65,44 @@ h1 {
 
 h2 {
     font-family: Ranade-Variable;
-    font-weight: 400;}
+    font-weight: 400;
+}
 
-h3{
+h3 {
     font-family: Ranade-Variable;
-    font-weight: 400;}
+    font-weight: 400;
+}
+
+h4 {
+    font-family: Ranade-Variable;
+    font-weight: 400;
+}
 
 h5 {
     font-family: Ranade-Variable;
-    font-weight: 400;}
+    font-weight: 400;
+}
 
 h6 {
     font-family: Ranade-Variable;
-    font-weight: 400;}
+    font-weight: 900;
+}
 
 p {
     font-family: Ranade-Variable;
-    font-weight: 400;}
+    font-weight: 400;
+}
 
-a{
+a {
     font-family: Ranade-Variable;
-    font-weight: 400;    text-decoration: none;
+    font-weight: 400;
+    text-decoration: none;
 }
 
 span {
     font-family: Ranade-Variable;
-    font-weight: 400;}
+    font-weight: 400;
+}
 
 /*-----Estilos de la Pagina-----*/
 
@@ -110,92 +122,35 @@ span {
     padding: 0em 2em;
 }
 
-#menu-toggle-btn {
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
-    width: 20px;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s;
-    z-index: 10;
-}
-
-.menu-btn {
-    height: 2px;
-    width: 2rem;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    transition: all 0.3s;
-    background: #222222;
-}
-
-.menu-btn::before {
-    content: "";
-    height: 2px;
-    width: 2rem;
-    display: inline-block;
-    position: absolute;
-    transform: translateY(-6px);
-    transition: all 0.3s;
-    background: #222222;
-    top: -2px;
-}
-
-.active .menu-btn {
-    transform: rotate(45deg);
-    background: #fff;
-}
-
-.active .menu-btn::before {
-    top: unset;
-    transform: rotate(-90deg);
-    background: #fff;
-}
-
-.active:hover .menu-btn::before {
-    top: unset;
-}
 
 /*Vista de Nevegacion*/
-
-.nav-container {
-    position: fixed;
-    width: 33vw;
-    height: 100vh;
-    top: 0;
-    right: -33vw;
-    color: #fff;
-    background: #222222;
-    transition: all 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    z-index: 2;
+.logo-zone {
+    top: -10vh;
+    opacity: 0;
+    position: relative;
 }
 
-.logo-text{
-    font-size: 1.8rem;
+.logo-text {
+    font-size: 1.6rem;
 }
 
-#time-text{
+#time-text {
     font-size: 1.1rem;
 }
 
-.weather-zone{
-    text-align: center;
+.weather-zone {
+    text-align: end;
+    top: -10vh;
+    opacity: 0;
+    position: relative;
 }
 
-#temperature-text{
-    font-size: 1.8rem;
+#temperature-text {
+    font-size: 1.6rem;
 
 }
 
-#temperature-desc{
+#temperature-desc {
     font-size: 1.1rem;
 }
 
@@ -210,34 +165,36 @@ span {
 }
 
 .scroller-section {
-	display: flex;
-	margin-left: 6vw;
-	padding-right: 6vw;
+    display: flex;
+    margin-left: 6vw;
+    padding-right: 6vw;
     gap: 2rem;
 }
-
-.scroll-text-section{
+#scroll-first{
+    transform: scale(.9);
+    opacity: 0;
+}
+.scroll-text-section {
     height: 70vh;
     min-width: 66vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-	font-size: 20rem;
-	line-height: 1;
+    font-size: 20rem;
+    line-height: 1;
     margin: 0 10vw 0 10vw;
-    text-transform: lowercase;
-	color: #222222;
-	color: transparent;
-	-webkit-text-stroke: 1px #222222;
-	-webkit-text-fill-color: transparent;
+    /* text-transform: lowercase; */
+    color: #222222;
+    color: transparent;
+    -webkit-text-stroke: 1px #222222;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
 }
 
-.gallery__text-inner{
+.gallery__text-inner {
     font-weight: 900;
 }
-
 
 .scroll-section {
     position: relative;
@@ -272,7 +229,7 @@ span {
     transition: all ease-in-out;
 }
 
-.scroll-text-container a{
+.scroll-text-container a {
     color: #ffffff;
     text-decoration: none;
 }
@@ -299,20 +256,21 @@ span {
     padding: 1rem;
 }
 
-.scroll-title-container h2{
+.scroll-title-container h4 {
     font-size: 2.4rem;
     margin-right: 3rem;
 }
 
-.scroll-title-container h6{
+.scroll-title-container h6 {
     font-size: 4.8rem;
-	color: #222222;
-	color: transparent;
-	-webkit-text-stroke: 1px #222222;
-	-webkit-text-fill-color: transparent;}
+    color: #222222;
+    color: transparent;
+    -webkit-text-stroke: 1px #222222;
+    -webkit-text-fill-color: transparent;
+}
 
 .scroll-section.open-section .scroll-title-container {
- grid-column: 1/3;
+    grid-column: 1/3;
 }
 
 .scroll-subtitle {
@@ -335,16 +293,17 @@ span {
     text-align: justify;
     transition: all .2s ease-in-out;
     opacity: 0;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     width: 95%;
 }
 
-.scroll-italic{
+.scroll-italic {
     font-style: oblique;
     font-family: Ranade-VariableItalic;
+    font-size: 1.6rem;
 }
 
-.scroll-section.open-section .scroll-text{
+.scroll-section.open-section .scroll-text {
     opacity: 1;
 }
 
@@ -422,32 +381,36 @@ span {
 }
 
 .footer-text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    top: 10vh;
+    opacity: 0;
+    position: relative;
 }
 
 
 /*---Responsive---*/
 
 @media(max-width: 600px) {
-    main{
+    main {
         overflow-x: scroll;
         overflow-y: hidden;
         height: 100dvh;
         display: grid;
-        grid-template-rows: 7vh 3vh 1fr 3vh 7vh;;
+        grid-template-rows: 7vh 3vh 1fr 3vh 7vh;
+        ;
     }
 
-    .scroller-container{
+    .scroller-container {
         height: 100%;
         grid-row: 3/4;
         align-items: center;
     }
 
-    .scroller-section{
+    .scroller-section {
         align-items: center;
     }
 
-    .nav-bar{
+    .nav-bar {
         height: 7vh;
     }
 
@@ -465,7 +428,7 @@ span {
         scroll-behavior: auto;
     }
 
-    .scroll-text-section{
+    .scroll-text-section {
         font-size: 7rem;
         min-width: auto;
         width: auto;
@@ -477,10 +440,10 @@ span {
     }
 
     /*----------Secciones----------*/
-    .scroll-title-container{
+    .scroll-title-container {
         display: none;
     }
-    
+
     .scroll-section {
         display: grid;
         grid-template-columns: 1fr;
@@ -491,7 +454,7 @@ span {
         overflow: hidden;
     }
 
-    .scroll-section.open-section{
+    .scroll-section.open-section {
         grid-template-columns: 1fr;
         grid-template-rows: 30% 70%;
     }
@@ -529,26 +492,26 @@ span {
         grid-row: 1/2;
         min-width: auto;
     }
-    
+
     .img_wrapper img,
     .scroll-section:hover .img_wrapper img {
         transform: scale(1);
         object-fit: cover;
     }
-    
-    .scroll-section.open-section:hover .img_wrapper img{
+
+    .scroll-section.open-section:hover .img_wrapper img {
         transform: scale(1.2);
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
 
-    .footer-container{
+    .footer-container {
         position: fixed;
         height: 7vh;
     }
 
-    #scroll-last{
+    #scroll-last {
         width: 100vw;
         align-items: center;
     }

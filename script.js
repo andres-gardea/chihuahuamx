@@ -7,67 +7,43 @@ const lscroll = new LocomotiveScroll({
 
 /*Animaciones entrada a la Pagina*/
 
-const initAnimation = () => {
-    gsap.timeline({ defaults: { ease: 'expo.inOut', stagger: 0.024 } })
-        .from('.img_wrapper',
-            {
-                duration: 1.4,
-                y: '100%',
-                autoAlpha: 0,
-            },
-        );
-};
-
-initAnimation();
-
-// /*Animaciones del Nav*/
-// const tl = gsap.timeline({ paused: true });
-
-// const animateOpenNav = () => {
-
-//     tl.to(".nav-container", 0.2, {
-//         x: '-33vw',
-//         autoAlpha: 1,
-//         delay: 0.1,
-//     });
-
-//     tl.to("#time-text, .logo-text", 0.2, {
-//         color: "#e0e0e0",
-//     },
-//         "-+0.1");
-
-//     tl.from(".social-links > div", 0.4, {
-//         opacity: 0,
-//         y: 10,
-//         stagger: {
-//             amount: 0.4,
-//         },
-//     });
-
-//     tl.to(".contact-link > a", 0.8, {
-//         top: 0,
-//         ease: "power2.inOut",
-//         stagger: {
-//             amount: 0.4,
-//         },
-//     },
-//         "-=0.4");
-
-//     tl.from(".nav-footer", 0.3, {
-//         opacity: 0
-//     }, "-=0.5").reverse();
+// const initAnimation = () => {
+//     gsap.timeline({ defaults: { ease: 'expo.inOut', stagger: 0.024 } })
+//         .from('.img_wrapper',
+//             {
+//                 duration: 1.4,
+//                 y: '100%',
+//                 autoAlpha: 0,
+//             },
+//         );
 // };
+// initAnimation();
 
-// const openNav = () => {
-//     animateOpenNav();
-//     const navBtn = document.getElementById("menu-toggle-btn");
-//     navBtn.onclick = function (e) {
-//         navBtn.classList.toggle("active");
-//         tl.reversed(!tl.reversed());
-//     };
-// };
+gsap.to(".logo-zone, .weather-zone", {
+    opacity: 1,
+    top: "0",
+    ease: "power3.inOut",
+    duration: 1.4,
+    delay: .1,
+    stagger: 0.1,
+});
 
-// openNav();
+gsap.to(".footer-text", {
+    opacity: 1,
+    top: "0",
+    ease: "power3.inOut",
+    duration: 1.4,
+    delay: .1,
+});
+
+gsap.to("#scroll-first", {
+    scale: 1,
+    opacity: 1,
+    ease: "power3.inOut",
+    duration: 1.2,
+    delay: .2
+});
+
 
 const photoSection1 = document.querySelector('#scroll-section-1');
 const photoSection2 = document.querySelector('#scroll-section-2');
